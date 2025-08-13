@@ -41,7 +41,7 @@ try {
     console.error('❌ Invalid environment variables:')
     console.error(JSON.stringify(e.flatten().fieldErrors, null, 2))
 
-    e.errors.forEach((err) => {
+    e.issues.forEach((err) => {
       const path = err.path.join('.')
       console.error(`  ${path}: ${err.message}`)
     })
